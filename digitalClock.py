@@ -1,4 +1,5 @@
 from tkinter import Tl, Label
+from datetime inport datetime
 
 window = Tk()
 window.title("Digital Clock")
@@ -8,4 +9,10 @@ window.configure(bg="steelblue")
 label = Label(window, font=("Arial Black",78,"bold"), bg="steelblue", fg="white")
 label.pack(pady=100)
 
+def clock():
+    time = datetime.now().strftime("%H:%M:%S")
+    label.configure(text=time)
+    lael.after(500,clock)
+
+clock()
 window.mainloop()
